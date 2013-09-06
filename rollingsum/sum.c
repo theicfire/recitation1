@@ -23,8 +23,12 @@
 #include "./sum.h"
 
 #include <stdio.h>
+#include "assert.h"
 
 void sum_array(int* array, int size, int start, int stop) {
+  assert(start >= 0);
+  assert(start < stop);
+  assert(stop <= size);
   int sum = 0;
   int i;
   for (i = start; i < stop; i++) {

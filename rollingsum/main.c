@@ -50,9 +50,12 @@ void print_array(int* array, int size) {
 int main(void) {
   int array[ARRAY_SIZE];
     clockmark_t time1 = ktiming_getmark();
-    gen_array(array, ARRAY_SIZE);
-    print_array(array, ARRAY_SIZE);
-    sum_array(array, ARRAY_SIZE, 0, ARRAY_SIZE);
+    int i;
+    for (i = 0; i < 10; i++) {
+        gen_array(array, ARRAY_SIZE);
+        print_array(array, ARRAY_SIZE);
+        sum_array(array, ARRAY_SIZE, 0, ARRAY_SIZE);
+    }
     clockmark_t time2 = ktiming_getmark();
 
     float elapsedf = ktiming_diff_sec(&time1, &time2);
