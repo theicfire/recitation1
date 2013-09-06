@@ -31,5 +31,5 @@ void sum_array(int* array, int size, int start, int stop) {
     sum += array[i];
   }
 
-  printf("The sum from %d to %d is %f.\n", start, stop, sum);
+  printf("The sum from %d to %d is %d.\n", start, stop, sum);
 }
